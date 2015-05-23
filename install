@@ -30,7 +30,7 @@ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8
 
 sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_25/bin/java
 
-Sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_25/bin/javac
+sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_25/bin/javac
 
 sudo nano /etc/bash.bashrc
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
