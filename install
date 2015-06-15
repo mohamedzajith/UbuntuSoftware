@@ -32,20 +32,13 @@ sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_25/bin/java
 
 sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_25/bin/javac
 
-sudo nano /etc/bash.bashrc
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
-	export PATH=$PATH:$JAVA_HOME/bin
-
-sudo nano /etc/profile
-	export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
-  	export PATH=$PATH:$JAVA_HOME/bin
 sudo gedit ~/.bashrc
 	export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
   	export PATH=$PATH:$JAVA_HOME/bin
 
-java -version
+sudo . ~/.bashrc
 
-restart your Ubuntu
+java -version
 
 echo $JAVA_HOME
 
