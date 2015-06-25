@@ -1,0 +1,3 @@
+sudo apt-get install gksu
+gksudo gedit /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+	allow-guest=false
