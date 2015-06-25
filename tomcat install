@@ -1,0 +1,9 @@
+download --->> https://tomcat.apache.org/download-80.cgi
+tar xvzf apache-tomcat-8.0.20.tar.gz
+sudo mv apache-tomcat-8.0.20  apache-tomcat8
+sudo mv apache-tomcat8  /usr/local/
+nano ~/.bashrc
+	export CATALINA_HOME=/usr/local/apache-tomcat8
+. ~/.bashrc
+$CATALINA_HOME/bin/startup.sh
+
