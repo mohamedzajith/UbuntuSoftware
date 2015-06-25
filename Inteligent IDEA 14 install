@@ -1,0 +1,7 @@
+sudo su
+tar xvzf ideaIU-14.0.2.tar.gz
+mv idea-IU-139.659.2/ idea/
+mv idea/ /opt/
+nano ~/.bashrc
+export PATH=/opt/idea/bin:$PATH
+. ~/.bashrc
