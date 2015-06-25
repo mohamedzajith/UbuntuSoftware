@@ -1,0 +1,5 @@
+sudo nano /etc/apt/apt.conf1
+	Acquire::http::proxy "http://username:password@192.168.222.1:3128/";
+	Acquire::https::proxy "https://username:password@192.168.222.1:3128/";
+	Acquire::ftp::proxy "ftp://username:password@192.168.222.1:3128/";
+	Acquire::socks::proxy "socks://username:password@192.168.222.1:3128/";
