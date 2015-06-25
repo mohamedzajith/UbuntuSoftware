@@ -1,0 +1,20 @@
+Adding Repository
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+    echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+
+Install MongoDB
+    sudo apt-get update
+    sudo apt-get install mongodb-org
+      or
+    apt-get install mongodb-org=2.6.0 mongodb-org-server=2.6.0 mongodb-org-shell=2.6.0 mongodb-org-mongos=2.6.0 mongodb-org-tools=2.6.0
+
+Start/Stop MongoDB Service
+    sudo service mongod start
+    sudo service mongod stop
+
+Verify MongoDB Installation
+    mongo --version
+
+mongodb more tutorial
+    http://mohamedzajith.blogspot.com/search/label/mongoDB
+    
