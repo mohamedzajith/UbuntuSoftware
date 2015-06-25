@@ -1,0 +1,23 @@
+Get Maven 3.0.4 binary distribution using the following command:
+	wget http://www.gtlib.gatech.edu/pub/apache/maven/binaries/apache-maven-3.0.4-bin.tar.gz
+
+Unpack the binary distribution using the following command:
+	tar -zxf apache-maven-3.0.4-bin.tar.gz
+
+Move uncompressed "apache-maven-3.0.4" directory to the /usr/local directory using this command:
+	sudo cp -R apache-maven-3.0.4 /usr/local
+
+Create a symbolic link to /usr/bin using the following command:
+	sudo ln -s /usr/local/apache-maven-3.0.4/bin/mvn /usr/bin/mvn
+
+Verify for correct installation using the following comman:
+	mvn –version
+
+It should print the following information:
+	Apache Maven 3.0.4 (r1232337; 2012-01-17 14:14:56+0530)
+	Maven home: /usr/local/apache-maven-3.0.4
+	Java version: 1.6.0_24, vendor: Sun Microsystems Inc.
+	Java home: /usr/lib/jvm/jdk-6u32/jre
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "3.2.0-27-generic", arch: "amd64", family: "unix"
+
