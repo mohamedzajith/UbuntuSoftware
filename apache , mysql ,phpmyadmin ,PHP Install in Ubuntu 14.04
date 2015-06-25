@@ -1,0 +1,57 @@
+To install apache, open terminal and type in these commands:
+	sudo apt-get update
+	sudo apt-get install apache2
+
+To install MySQL, open terminal and type in these commands:
+	sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
+
+Once you have installed MySQL, we should activate it with this command:
+	sudo mysql_install_db
+
+Finish up by running the MySQL set up script:
+	sudo /usr/bin/mysql_secure_installation
+
+To install PHP, open terminal and type in this command.
+	sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+
+It may also be useful to add php to the directory index, to serve the relevant php index files:
+	sudo nano /etc/apache2/mods-enabled/dir.conf
+Add index.php to the beginning of index files. The page should now look like this:
+	<IfModule mod_dir.c>
+	          DirectoryIndex index.php index.html index.cgi index.pl index.php index.xhtml index.htm
+	</IfModule>
+
+PHP Modules
+	apt-cache search php5-
+
+See PHP on your Server To set this up, first create a new file:
+	sudo nano /var/www/html/info.php
+
+Add in the following line:
+	<?php
+		phpinfo();
+	?>
+
+Restart apache so that all of the changes take effect:
+	sudo service apache2 restart
+
+Install phpMyAdmin
+	sudo apt-get install phpmyadmin apache2-utils
+
+After the installation has completed, add phpmyadmin to the apache configuration.
+	sudo nano /etc/apache2/apache2.conf
+
+Add the phpmyadmin config to the file.
+	Include /etc/phpmyadmin/apache.conf
+
+Restart apache:
+	sudo service apache2 restart
+
+Set Up the .htaccess File
+	sudo nano /etc/phpmyadmin/apache.conf
+
+	<Directory /usr/share/phpmyadmin>
+      	  Options FollowSymLinks
+      	  DirectoryIndex index.php
+          AllowOverride All
+       	  [...]
