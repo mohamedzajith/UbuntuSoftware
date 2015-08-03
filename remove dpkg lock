@@ -1,0 +1,6 @@
+If you get error like following, while you are doing any apt-get update or anything after the source list update
+  Could not get lock /var/lib/apt/lists/lock - open (11: Resource temporarily unavailable)
+
+Do the following option on it
+  sudo rm /var/lib/apt/lists/* -vf 
+  sudo apt-get update
