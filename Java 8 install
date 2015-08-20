@@ -23,7 +23,7 @@ sudo gedit ~/.bashrc
 	export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
   	export PATH=$PATH:$JAVA_HOME/bin
 
-sudo . ~/.bashrc
+. ~/.bashrc
 
 java -version
 
