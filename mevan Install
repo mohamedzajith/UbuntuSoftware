@@ -5,11 +5,24 @@ Unpack the binary distribution using the following command:
 	tar -zxf apache-maven-3.2.5-bin.tar.gz
 
 Move uncompressed "apache-maven-3.2.5" directory to the /usr/local directory using this command:
-	sudo cp -R apache-maven-3.2.5 /usr/local
+	sudo mv apache-maven-3.2.5 /usr/local
 
-Create a symbolic link to /usr/bin using the following command:
-	sudo ln -s /usr/local/apache-maven-3.2.5/bin/mvn /usr/bin/mvn
+Edit bashrc file.
+	sudo nano ~/.bashrc
+	
+paste lines in bashrc file.
+	export M2_HOME=/usr/local/apache-maven-3.2.5
+	export M2=$M2_HOME/bin
+	export MAVEN_OPTS="-Xms1024m -Xmx4096m"
+	export PATH=$M2:$PATH
 
+save & exit
+	save--> ctrl+o  after enter
+	exit--> ctrl+x
+
+refresh bashrc file
+ . ~/.bashrc
+ 
 Verify for correct installation using the following comman:
 	mvn --version
 
@@ -20,5 +33,3 @@ It should print the following information:
 	Java home: /usr/lib/jvm/jdk1.7.0_75/jre
 	Default locale: en_US, platform encoding: UTF-8
 	OS name: "linux", version: "3.16.0-30-generic", arch: "amd64", family: "unix"
-
-
