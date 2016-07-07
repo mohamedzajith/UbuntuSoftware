@@ -21,3 +21,8 @@ Custom TCP Rule         TCP       8080      0.0.0.0/0
 #That's it you can access from the following urls.
 http://<public-dns-address>:8080/
 
+
+#Setup Magement-GUI user in tomcat user configuration
+<role rolename="manager-gui"/>
+<user username="tomcat" password="tomcat" roles="tomcat, manager-gui"/>
+
