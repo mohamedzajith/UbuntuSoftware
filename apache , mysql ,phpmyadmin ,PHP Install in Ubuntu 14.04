@@ -28,9 +28,7 @@ See PHP on your Server To set this up, first create a new file:
 	sudo nano /var/www/html/info.php
 
 Add in the following line:
-	<?php
-		phpinfo();
-	?>
+	<?php phpinfo(); ?>
 
 Restart apache so that all of the changes take effect:
 	sudo service apache2 restart
