@@ -7,3 +7,4 @@ nano ~/.bashrc
 . ~/.bashrc
 $CATALINA_HOME/bin/startup.sh
 
+test this
